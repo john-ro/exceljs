@@ -1,12 +1,14 @@
-# ExcelJS
+# ExcelJS2
 
 Read, manipulate and write spreadsheet data and styles to XLSX and JSON.
 
 Reverse engineered from Excel spreadsheet files as a project.
 
+**This is a forked copy of [exceljs](https://github.com/guyonroche/exceljs). I recommend using the original.**
+
 # Installation
 
-npm install exceljs
+npm install exceljs2
 
 # New Features!
 
@@ -122,7 +124,7 @@ The Workbook views controls how many separate windows Excel will open when viewi
 ```javascript
 workbook.views = [
   {
-    x: 0, y: 0, width: 10000, height: 20000, 
+    x: 0, y: 0, width: 10000, height: 20000,
     firstSheet: 0, activeTab: 1, visibility: 'visible'
   }
 ]
@@ -207,8 +209,8 @@ var worksheetWriter = workbookWriter.addSheet('sheet', {
 
 // adjust pageSetup settings afterwards
 worksheete.pageSetup.margins = {
-  left: 0.7, right: 0.7, 
-  top: 0.75, bottom: 0.75, 
+  left: 0.7, right: 0.7,
+  top: 0.75, bottom: 0.75,
   header: 0.3, footer: 0.3
 };
 
@@ -242,10 +244,10 @@ worksheete.pageSetup.margins = {
 
 | Name                          | Value     |
 | ----------------------------- | --------- |
-| Letter                        | undefined | 
-| Legal                         |  5        | 
-| Executive                     |  7        | 
-| A4                            |  9        | 
+| Letter                        | undefined |
+| Legal                         |  5        |
+| Executive                     |  7        |
+| A4                            |  9        |
 | A5                            |  11       |
 | B5 (JIS)                      |  13       |
 | Envelope #10                  |  20       |
@@ -1046,7 +1048,7 @@ The CSV parser uses [fast-csv](https://www.npmjs.com/package/fast-csv) to read t
 
 Dates are parsed using the npm module [moment](https://www.npmjs.com/package/moment).
  If no dateFormats are supplied, the following are used:
- 
+
 * moment.ISO_8601
 * 'MM-DD-YYYY'
 * 'YYYY-MM-DD'
